@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.st_andrews.aj83.arduinocontrol.TrafficControl">
+
+    <Button
+        android:id="@+id/turn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/turn_Bar"
+        android:layout_alignParentStart="true"
+        android:onClick="colorClick"
+        android:text="45" />
+
+    <Button
+        android:id="@+id/turn_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/turn_3"
+        android:layout_alignBottom="@+id/turn_3"
+        android:layout_toEndOf="@+id/turn_1"
+        android:background="@android:color/darker_gray"
+        android:onClick="colorClick"
+        android:text="90" />
+
+    <Button
+        android:id="@+id/turn_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/turn_4"
+        android:layout_alignBottom="@+id/turn_4"
+        android:layout_toEndOf="@+id/turn_2"
+        android:onClick="colorClick"
+        android:text="135" />
+
+    <Button
+        android:id="@+id/turn_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="58dp"
+        android:layout_toEndOf="@+id/turn_3"
+        android:background="@android:color/darker_gray"
+        android:onClick="colorClick"
+        android:text="180" />
+
+    <Button
+        android:id="@+id/color_R"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/turn_Bar"
+        android:layout_marginTop="64dp"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="colorClick"
+        android:text="Red" />
+
+    <SeekBar
+        android:id="@+id/turn_Bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/turn_2"
+        android:layout_marginTop="26dp"
+        android:max="180"
+        android:progress="0"/>
+
+    <Button
+        android:id="@+id/color_G"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/color_R"
+        android:layout_toEndOf="@+id/color_R"
+        android:background="@android:color/holo_green_dark"
+        android:onClick="colorClick"
+        android:text="green" />
+
+    <Button
+        android:id="@+id/color_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/color_G"
+        android:layout_toEndOf="@+id/color_G"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="colorClick"
+        android:text="Blue" />
+
+    <Button
+        android:id="@+id/color_S"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/color_B"
+        android:layout_alignBottom="@+id/color_B"
+        android:layout_toEndOf="@+id/color_B"
+        android:onClick="colorClick"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/pattern_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/color_R"
+        android:layout_marginTop="55dp"
+        android:background="@android:color/holo_purple"
+        android:onClick="colorClick"
+        android:text="L1" />
+
+    <Button
+        android:id="@+id/pattern_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/pattern_1"
+        android:layout_toEndOf="@+id/pattern_1"
+        android:background="@android:color/holo_orange_light"
+        android:onClick="colorClick"
+        android:text="L2" />
+
+    <Button
+        android:id="@+id/pattern_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/pattern_2"
+        android:layout_toEndOf="@+id/pattern_2"
+        android:background="@android:color/holo_blue_bright"
+        android:onClick="colorClick"
+        android:text="L3" />
+
+    <TextView
+        android:id="@+id/pattern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pattern_2"
+        android:layout_alignParentStart="true"
+        android:padding="12dp"
+        android:textSize="20dp"
+        android:text="Patterns" />
+
+    <TextView
+        android:id="@+id/servo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/turn_1"
+        android:layout_alignParentStart="true"
+        android:padding="12dp"
+        android:text="Servo"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/color_G"
+        android:layout_alignEnd="@+id/servo"
+        android:padding="12dp"
+        android:text="color"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>
